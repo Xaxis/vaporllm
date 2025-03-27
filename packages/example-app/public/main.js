@@ -2,7 +2,7 @@ import { Runner } from "@vaporllm/inference-runner";
 
 async function main() {
     const runner = new Runner({
-        modelUrl: "/models/dummy_tiny_model.bin",
+        model: "name_of_model",
         backend: "auto",
         enableCache: true,
     });

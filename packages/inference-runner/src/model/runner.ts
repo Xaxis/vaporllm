@@ -23,34 +23,18 @@ export class Runner {
     }
 
     public async init(): Promise<void> {
-        // 1. Decide which backend to use
-        const chosenBackend = this.pickBackend();
-
-        // 2. Based on the chosen backend, load files
-        if (chosenBackend === "wasm") {
-            // (A) Load the wasm engine
-            await this.loader.loadEngine("/models/engine.wasm");
-
-            // (B) Then load the model’s .bin (assuming user provided it)
-            if (!this.config.modelUrl) {
-                throw new Error("modelUrl must be provided for WASM backend.");
-            }
+        // 1. Load the model
+        if (this.config.modelUrl) {
             await this.loader.loadModel(this.config.modelUrl);
-
-        } else if (chosenBackend === "webgl" || chosenBackend === "webgpu") {
-            // Just load the model .bin
-            if (!this.config.modelUrl) {
-                throw new Error("modelUrl must be provided for GPU backends.");
-            }
-            await this.loader.loadModel(this.config.modelUrl);
-
-        } else {
-            throw new Error(`Unsupported backend: ${chosenBackend}`);
         }
+
+        // 2. Decide which backend to use
+        const chosenBackend = this.pickBackend();
 
         // 3. Instantiate and init the backend
         this.backend = this.createBackend(chosenBackend);
         await this.backend.init(this.loader.getArtifacts());
+
         console.log(`Runner initialized using ${chosenBackend} backend.`);
     }
 
@@ -78,7 +62,9 @@ export class Runner {
             return this.config.backend;
         }
 
-        // "auto" detection logic (super naive)
+        // @TODO
+        // This is "auto" detection logic for platform support (super naive example)
+        // In real implementation, will have more sophisticated checks
         if (typeof WebAssembly !== "undefined") {
             return "wasm";
         }
