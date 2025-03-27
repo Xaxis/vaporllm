@@ -35,7 +35,7 @@ A client-based distributed inference framework.
 ## ✅ Key Features
 
 - Full model execution with no server-side inference.
-- Runs on most modern browsers with WASM + WebGL/WebGPU support.
+- Runs on most modern browsers with WASM +/- WebGL +/- WebGPU support.
 - Offline and privacy-first modes.
 - Peer-to-peer inference sharing (opt-in).
 - Extensible model format support (ONNX, GGML-to-WASM, WebLLM, etc).
