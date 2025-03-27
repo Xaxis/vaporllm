@@ -2,7 +2,7 @@
 
 A client-based distributed inference framework.
 
-`vaporllm` enables real-time, cross-browser model inference entirely in the frontend, with optional peer-to-peer coordination. Models are executed locally in the browser using WebAssembly (WASM) and WebGPU (when available), and clients can optionally serve inference requests to other users in the network.
+`vaporllm` enables real-time, cross-browser model inference entirely in the frontend, with optional peer-to-peer coordination. Models are executed locally in the browser using WebAssembly (WASM), WebGL, and WebGPU (when available), and clients can optionally serve inference requests to other users in the network.
 
 ## 🔍 What It Is
 
