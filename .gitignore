@@ -9,5 +9,10 @@ node_modules
 # Build
 dist
 
+# WASM Build
+/target
+/pkg
+/dist/wasm-engine
+
 # Misc
 .DS_Store

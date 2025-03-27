@@ -10,6 +10,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "build:wasm-engine": "cd wasm-engine && wasm-pack build --target web --release --out-dir ../dist/wasm-engine",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [

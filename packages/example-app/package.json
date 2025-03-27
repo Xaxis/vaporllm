@@ -1,0 +1,14 @@
+{
+  "name": "@vaporllm/example-app",
+  "version": "0.0.1",
+  "description": "Example web app to test @vaporllm/inference-runner",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "@vaporllm/inference-runner": "0.0.1"
+  }
+}
