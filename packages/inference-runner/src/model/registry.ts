@@ -10,22 +10,22 @@ export const MODEL_REGISTRY: Record<string, ModelInfo> = {
     "distilgpt2": {
         name: "DistilGPT2",
         library: "transformers",
-        path: "/models/distilgpt2" // or you might rely on the default HF location???
+        path: "distilgpt2" // or you might rely on the default HF location???
     },
     "gpt2": {
         name: "GPT2",
         library: "transformers",
-        path: "/models/gpt2"
+        path: "gpt2"
     },
     "onnx-gpt2": {
         name: "GPT2-ONNX",
         library: "onnx",
-        path: "/models/onnx/gpt2"
+        path: "onnx/gpt2"
     },
     "llama2-7b": {
         name: "LLaMA2-7B",
         library: "mlc",
-        path: "/models/llama2-7b"
+        path: "llama2-7b"
     }
 
     // @TODO
