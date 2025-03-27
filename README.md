@@ -14,7 +14,7 @@ A client-based distributed inference framework.
 ## 🧩 Core Components
 
 ### 🧠 Inference Runner
-- Loads and runs full LLMs locally via WASM/WebGPU.
+- Loads and runs full LLMs locally via WASM/WebGL/WebGPU.
 - Hosts one or more models and serves inference requests.
 - Caches model binaries and weights in IndexedDB.
 
