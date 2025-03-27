@@ -1,4 +1,4 @@
 export interface Backend {
-    init(modelArtifacts: ArrayBuffer[]): Promise<void>;
+    init(options: { modelPath: string }): Promise<void>;
     runInference(inputTokens: number[]): Promise<number[]>;
 }

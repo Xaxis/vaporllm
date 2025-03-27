@@ -2,9 +2,7 @@ import { Runner } from "@vaporllm/inference-runner";
 
 async function main() {
     const runner = new Runner({
-        model: "name_of_model",
-        backend: "auto",
-        enableCache: true,
+        model: "gpt2"
     });
 
     await runner.init();

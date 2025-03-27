@@ -1,20 +1,8 @@
 export class Loader {
-    private modelArtifacts: ArrayBuffer[] = [];
-
-    public async loadModel(modelUrl: string): Promise<void> {
-
-        // @TODO
-        // In a real scenario, we might fetch a manifest, then fetch multiple files
-        // For now, assume there's just a single binary or something similar
-        console.log(`Loader: Fetching model from ${modelUrl}`);
-        const response = await fetch(modelUrl);
-        const arrayBuffer = await response.arrayBuffer();
-
-        // Keep an array of artifact parts if needed
-        this.modelArtifacts = [arrayBuffer];
-    }
-
-    public getArtifacts(): ArrayBuffer[] {
-        return this.modelArtifacts;
+    // @TODO - Store artifacts or do custom fetching logic if needed
+    public async loadModel(modelPath: string): Promise<void> {
+        // For transformers.js or ONNX, probably nothing to do manually here;
+        // or we might fetch metadata of some sort?
+        console.log(`Loader: (Optional) Doing nothing for modelPath=${modelPath}`);
     }
 }
