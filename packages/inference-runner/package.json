@@ -1,13 +1,21 @@
 {
-  "name": "inference-runner",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@vaporllm/inference-runner",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "author": "Wil Neeley <wil@atypic.ai>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "description": ""
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
 }

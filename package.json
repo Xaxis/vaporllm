@@ -2,20 +2,27 @@
   "name": "vaporllm",
   "version": "1.0.0",
   "description": "A client based distributed inference framework.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Xaxis/vaporllm.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Xaxis/vaporllm/issues"
   },
-  "homepage": "https://github.com/Xaxis/vaporllm#readme"
+  "homepage": "https://github.com/Xaxis/vaporllm#readme",
+  "private": true,
+  "workspaces": [
+    "packages/inference-runner",
+    "packages/example-app"
+  ],
+  "scripts": {
+    "start:example-app": "npm start --workspace @vaporllm/example-app",
+    "build:inference-runner": "npm run build -w @vaporllm/inference-runner",
+    "publish:inference-runner": "npm publish --workspace @vaporllm/inference-runner --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
